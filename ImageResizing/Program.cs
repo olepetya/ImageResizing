@@ -9,6 +9,11 @@ namespace ImageResizing {
         static void Main(string[] args) {
             int width = 128;
             int height = 128;
+            if (args.Length < 1) {
+                Console.WriteLine("Enter Image FileName as parameter to resize");
+                return;
+            }
+
             var file = args[0];
             Console.WriteLine($"Loading {file}");
             Console.WriteLine(
